@@ -1,0 +1,28 @@
+{
+  "name": "meatbunches",
+  "version": "0.0.0",
+  "description": "it's the meatspace bunch, the meatspace bunch, that's the way we became the meatspace bunch",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev" : "supervisor -w public,views app.js",
+    "start" : "./node_modules/.bin/supervisor app.js"
+  },
+  "keywords": [
+    "meatspace",
+    "meatbunches",
+    "meatbunch",
+    "brady",
+    "bunch",
+    "nodejsisataco"
+  ],
+  "author": "Lydia Katsamberis",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~3.4.7",
+    "socket.io": "~0.9.16",
+    "jade": "~0.35.0",
+    "socket.io-client": "~0.9.16",
+    "supervisor": "~0.5.6"
+  }
+}

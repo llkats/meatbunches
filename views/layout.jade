@@ -1,0 +1,20 @@
+doctype 5
+html(lang="en")
+  head
+    title the meatspace bunch
+    link(type="text/css", rel="stylesheet", href="/styles.css")
+    link(type="text/css", rel="stylesheet", href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css")
+    script(src="//code.jquery.com/jquery-1.9.1.js", type="text/javascript")
+    script(src="//code.jquery.com/ui/1.10.3/jquery-ui.js", type="text/javascript")
+    script(src="/socket.io/socket.io.js", type="text/javascript")
+
+  body
+    div#wrapper
+      h1 This is the story
+      ul#meats
+      h1 of a bunch of meats
+    script(type="text/template", id="template")
+      li.meat
+        a
+          img
+    script(src="/client.js", type="text/javascript")

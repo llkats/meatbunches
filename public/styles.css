@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Brady Bunch Remastered";
+  src: url("http://meatbunch.es/BradBunR.ttf");
+}
+
+body {
+  background-color: #3984fa;
+  margin: 0;
+}
+
+#wrapper {
+  margin: 100px auto;
+  width: 655px;
+}
+
+ul {
+  display: block;
+  height: 318px;
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 620px;
+}
+
+h1 {
+  color: white;
+  font-family: "Brady Bunch Remastered", sans-serif;
+  text-align: center;
+  clear: both;
+  font-size: 66px;
+}
+
+img {
+  border: 3px solid #111;
+  height: 150px;
+  width: 200px;
+}
+
+li {
+  height: auto;
+  margin-top: -6px;
+  position: relative;
+  width: 206px;
+}
+
+.logo {
+  border: 0;
+  height: 100px;
+  margin: 27px auto 20px;
+  width: 200px;
+}
+
+.meat {
+  float: left;
+  width: 206px;
+}
+
+a {
+  display: block;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:hover:after {
+  color: white;
+  content: 'x';
+  font-family: "Brady Bunch Remastered", sans-serif;
+  font-size: 24px;
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+
+a:hover img {
+  opacity: 0.5;
+}
+
+.logolink {
+  cursor: default;
+}
+
+.logolink:hover img {
+  opacity: 1;
+}
+
+.logolink:hover:after {
+  content: '';
+}
