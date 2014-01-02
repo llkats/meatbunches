@@ -89,3 +89,17 @@ a:hover img {
 .logolink:hover:after {
   content: '';
 }
+
+#credit {
+  color: white;
+  font-family: sans-serif;
+  font-size: 12px;
+  margin: 100px auto 50px;
+  text-align: center;
+  width: 400px;
+}
+
+#credit a {
+  color: #FAF20C;
+  display: inline;
+}
