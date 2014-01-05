@@ -13,7 +13,7 @@ npm install
 npm install -g supervisor
 ```
 
-To do local development, make sure to change line 3 of `client.js` to `http://localhost:[PORT OF YOUR CHOOSING CHOOSE WISELY]`. Use `sudo supervisor app.js` to start a server that'll watch for changes to the folder.
+To do local development, make sure to change line 3 of `client.js` to `http://localhost:[PORT OF YOUR CHOOSING CHOOSE WISELY]`. Next, configure `app.js` to run on the chosen port (it runs on port 80 by default). Use `sudo supervisor app.js` to start a server that'll watch for changes to the folder.
 
 ## Cat
 
