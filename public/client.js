@@ -2,6 +2,7 @@
 
   var socket = io.connect('http://meatbunch.es');
   var template = $('#template').html();
+  var fingerprints = [];
 
   socket.on('newmeat', function (data) {
 
@@ -10,6 +11,12 @@
     var images = $('img');
 
     if (images.length < 9) {
+
+      //make sure that each fingerprint is unique. Want each of the 8 to be different, just like the BB
+      if (fingerprints.indexOf(data.meat.chat.value.fingerprint) !== -1){
+        return;
+      }
+      fingerprints.push(data.meat.chat.value.fingerprint);
 
       // search for empty images, fill them with new data
       if ($('[data-empty]').length > 0) {
