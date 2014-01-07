@@ -52,7 +52,13 @@
 
     // else add new data to elements already present
     else if ($('[data-empty]').length > 0) {
-      $('[data-empty]').first().attr('src', data.meat.chat.value.media).removeAttr('data-empty');
+      if (fingerprints.indexOf(data.meat.chat.value.fingerprint) !== -1){
+        return;
+      }
+       $('[data-empty]').first().attr({
+        'src': data.meat.chat.value.media, 
+        'data-fingerprint': data.meat.chat.value.fingerprint
+      }).removeAttr('data-empty');
       return;
     }
   });
@@ -67,7 +73,7 @@
     if (index > -1){
       fingerprints.splice(index, 1);
     }
-    $(e.currentTarget).find('img').attr({'src' : '', 'data-empty' : ''});
+    $(e.currentTarget).find('img').attr({'src' : '', 'data-empty' : ''}).removeAttr('data-fingerprint');;
 
   });
 
