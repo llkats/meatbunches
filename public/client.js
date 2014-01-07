@@ -28,7 +28,8 @@
       copy.find('img').attr({
         'src' : data.meat.chat.value.media,
         'height' : '150',
-        'width' : '200'
+        'width' : '200', 
+        'fingerprint' : data.meat.chat.value.fingerprint
       });
 
       // if the image is the 4th one appended (counting from zero), create the meatspace logo
@@ -59,8 +60,15 @@
   // remove an unwanted gif
   $('ul').on('click', 'a:not(:eq(4))', function(e) {
     e.preventDefault();
-
+    //removing gif is not a permanent block, so we should let them back in if they post again to chat.meatspace,
+    //therefore we need to remove their fingerprint from the array
+    var fingerprintToRemove = $(e.currentTarget).find('img').attr("data-fingerprint");
+    var index = fingerprints.indexOf(fingerprintToRemove);
+    if (index > -1){
+      fingerprints.splice(index, 1);
+    }
     $(e.currentTarget).find('img').attr({'src' : '', 'data-empty' : ''});
+
   });
 
 }(jQuery));
